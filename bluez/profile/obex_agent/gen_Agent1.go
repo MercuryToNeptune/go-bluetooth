@@ -25,7 +25,7 @@ func NewAgent1(servicePath string, objectPath dbus.ObjectPath) (*Agent1, error) 
 			Name:  servicePath,
 			Iface: Agent1Interface,
 			Path:  dbus.ObjectPath(objectPath),
-			Bus:   bluez.SystemBus,
+			Bus:   bluez.SessionBus,
 		},
 	)
 	a.Properties = new(Agent1Properties)
